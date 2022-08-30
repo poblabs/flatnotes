@@ -22,7 +22,7 @@
     <!-- Login -->
     <Login v-if="currentView == views.login" class="flex-grow-1"></Login>
 
-    <!-- Home -->
+    <!-- Home POB 25 -->
     <div
       v-if="currentView == views.home"
       class="
@@ -44,7 +44,7 @@
       <NoteList
         class="recently-modified"
         mini-header="Recently Modified"
-        :num-recently-modified="5"
+        :num-recently-modified="25"
         :show-loader="false"
         centered
       ></NoteList>
