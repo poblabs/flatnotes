@@ -53,9 +53,10 @@ export default {
       if (basePath == constants.basePaths.home) {
         this.updateDocumentTitle();
         this.currentView = this.views.home;
-        this.$nextTick(function() {
-          this.focusSearchInput();
-        });
+        // POB
+        // this.$nextTick(function() {
+          // this.focusSearchInput();
+        // });
       }
 
       // Search
