@@ -26,15 +26,17 @@ def create_access_token(data: dict):
 
 
 async def validate_token(token: str = Depends(oauth2_scheme)):
-    try:
-        payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
-        username = payload.get("sub")
-        if username is None or username.lower() != FLATNOTES_USERNAME.lower():
-            raise ValueError
-        return FLATNOTES_USERNAME
-    except (JWTError, ValueError):
-        raise HTTPException(
-            status_code=401,
-            detail="Invalid authentication credentials",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
+    # POB edit - disable authentication
+    return True
+    # try:
+    #     payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
+    #     username = payload.get("sub")
+    #     if username is None or username.lower() != FLATNOTES_USERNAME.lower():
+    #         raise ValueError
+    #     return FLATNOTES_USERNAME
+    # except (JWTError, ValueError):
+    #     raise HTTPException(
+    #         status_code=401,
+    #         detail="Invalid authentication credentials",
+    #         headers={"WWW-Authenticate": "Bearer"},
+    #     )
