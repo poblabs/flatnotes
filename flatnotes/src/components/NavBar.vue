@@ -15,10 +15,10 @@
         <b-icon icon="plus-circle"></b-icon> New
       </button>
 
-      <!-- Log Out -->
-      <button type="button" class="bttn" @click="$emit('logout')">
-        <b-icon icon="box-arrow-right"></b-icon> Log Out
-      </button>
+      <!-- Log Out POB -->
+      <!-- <button type="button" class="bttn" @click="$emit('logout')"> -->
+        <!-- <b-icon icon="box-arrow-right"></b-icon> Log Out -->
+      <!-- </button> -->
 
       <!-- A-Z -->
       <button type="button" class="bttn" @click="$emit('a-z')">A-Z</button>
